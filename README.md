@@ -16,23 +16,23 @@ Training and Testing data was created by shuffling the input images and using sc
 
 A CNN Model was created which looked like this: 
       ________________________________________________________________
-Layer (type)                 Output Shape              Param #   
+Layer (type)                  Output Shape                  Param #   
 =================================================================
-conv2d_1 (Conv2D)            (None, 32, 198, 198)      320       
+conv2d_1 (Conv2D)             (None, 32, 198, 198)                 320       
 _________________________________________________________________
-conv2d_2 (Conv2D)            (None, 30, 196, 32)       57056     
+conv2d_2 (Conv2D)             (None, 30, 196, 32)                 57056     
 _________________________________________________________________
-max_pooling2d_1 (MaxPooling2 (None, 15, 98, 32)        0         
+max_pooling2d_1(MaxPooling2   (None, 15, 98, 32)                  0         
 _________________________________________________________________
-dropout_1 (Dropout)          (None, 15, 98, 32)        0         
+dropout_1 (Dropout)           (None, 15, 98, 32)                  0         
 _________________________________________________________________
-flatten_1 (Flatten)          (None, 47040)             0         
+flatten_1 (Flatten)                 (None, 47040)                 0         
 _________________________________________________________________
-dense_1 (Dense)              (None, 128)               6021248   
+dense_1 (Dense)                     (None, 128)                   6021248   
 _________________________________________________________________
-dropout_2 (Dropout)          (None, 128)               0         
+dropout_2 (Dropout)                 (None, 128)                   0         
 _________________________________________________________________
-dense_2 (Dense)              (None, 13)                1677      
+dense_2 (Dense)               (None, 13)                    1677      
 =================================================================
 Total params: 6,080,301
 Trainable params: 6,080,301
