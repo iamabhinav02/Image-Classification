@@ -14,29 +14,6 @@ Then, I manually created all the labels looking into the folder "input_data_resi
 
 Training and Testing data was created by shuffling the input images and using scikit-learn module named train_test_split. All the labels were converted into one-hot encoding format. 
 
-A CNN Model was created which looked like this: 
-      ________________________________________________________________
-Layer (type)                  Output Shape                  Param #   
-=================================================================
-conv2d_1 (Conv2D)             (None, 32, 198, 198)                 320       
-_________________________________________________________________
-conv2d_2 (Conv2D)             (None, 30, 196, 32)                 57056     
-_________________________________________________________________
-max_pooling2d_1(MaxPooling2   (None, 15, 98, 32)                  0         
-_________________________________________________________________
-dropout_1 (Dropout)           (None, 15, 98, 32)                  0         
-_________________________________________________________________
-flatten_1 (Flatten)                 (None, 47040)                 0         
-_________________________________________________________________
-dense_1 (Dense)                     (None, 128)                   6021248   
-_________________________________________________________________
-dropout_2 (Dropout)                 (None, 128)                   0         
-_________________________________________________________________
-dense_2 (Dense)                     (None, 13)                    1677      
-=================================================================
-
-Total params: 6,080,301
-Trainable params: 6,080,301
-Non-trainable params: 0
+A CNN Model was created then with 2 convolution2D layer 1 maxpooling2D layer, a droput layer which dropped 50% of the data for preventing overfitting. Then it was flattened to give an aaray of data which was then fitted into a neural network with 128 neurons in the first hidden layer and then 13 neurons in the output layer which gave output in one hot encoding format.
 
 This model was created to decide which image would belong to which class and hence an accuracy of 85% was obtained.
